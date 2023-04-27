@@ -76,6 +76,38 @@ initialize({
 });
 ```
 
+
+#  Typescript
+
+```ts
+import { initialize, logMessage, LoggingConfig, GraylogConfig, CloudWatchConfig } from 'log-aggregator';
+
+const myGraylogConfig: GraylogConfig = {
+  graylogHost: 'localhost',
+  graylogPort: 12201
+};
+
+const myCloudwatchConfig: CloudWatchConfig = {
+  region: 'us-east-1',
+  accessKeyId: 'my-access-key',
+  secretAccessKey: 'my-secret-key'
+};
+
+const myLoggingConfig: LoggingConfig = {
+  loggingSystem: 'graylog',
+  graylogConfig: myGraylogConfig
+};
+
+initialize(myLoggingConfig);
+
+logMessage('This is a log message', { foo: 'bar', baz: 123 });
+```
+
+The `initialize` function takes a `LoggingConfig` object as its parameter, which specifies the logging system to use and its configuration. The `logMessage` function takes a string message and an optional `metadata` object of type `Record<string, any>`.
+
+Note that the library has been updated to allow metadata to accept a `string`, `array`, `object`, or `array of objects`.
+
+
 # Contributing
 Contributions are welcome! Please see `CONTRIBUTING.md` for more information.
 
