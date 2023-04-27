@@ -2,6 +2,7 @@
   "name": "log-aggregator",
   "version": "1.0.1",
   "description": "\"Log-aggregator\" is a Node.js package that provides a simple way to aggregate logs from multiple sources. Whether you're using local file logging, a third-party logging service, or a cloud-based logging system like AWS CloudWatch, \"log-aggregator\" allows you to combine all your logs into a single, centralized location. This makes it easier to search and analyze your logs, identify trends and issues, and troubleshoot problems. With \"log-aggregator\", you can improve your application's logging functionality and gain valuable insights into how your application is performing.",
+  "types": "src/index.d.ts",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha test/**/*.js"
@@ -25,6 +26,10 @@
   ],
   "author": "Mkparu Chisom (Donsoft)",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donchi4all/log-aggregator/issues"
+  },
+  "homepage": "https://github.com/donchi4all/log-aggregator#readme",
   "dependencies": {
     "aws-sdk": "^2.1366.0",
     "gelf-pro": "^1.3.10"
